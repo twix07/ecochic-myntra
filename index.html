@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#8cdbff">
+    <title>vr fashion show</title>
+    <meta name="description" content="fashion show in vr">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.12/dist/clipboard.min.js"></script>
+    <script src="vendor/aframe.min.js"></script>
+    <script src="vendor/aframe-motion-capture-components.js"></script>
+    <script src="vendor/gif.js"></script>
+    <script src="vendor/download.js"></script>
+    <script src="vendor/CCapture.min.js"></script>
+    <script src="https://unpkg.com/aframe-uploadcare-component/dist/aframe-uploadcare-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras@^6/dist/aframe-extras.min.js"></script>
+    <script src="build/build.js"></script>
+
+    <link rel="manifest" href="manifest.webmanifest">
+
+   
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <meta name="application-name" content="A-Saturday-Night">
+    <meta name="msapplication-TileColor" content="#f50a1d">
+    <meta name="msapplication-TileImage" content="mstile-144x144.png">
+  </head>
+  <body>
+    <div class="instructions-overlay" id="instructions">
+      <div class="instructions" class="hide">
+        
+        <div>
+          <h2>Welcome to fashion in the virtual world!</h2>
+          
+        </div>
+        <button class="start-button"><span>Loading...</span></button>
+        <div class="credits">
+          <span class="title"> </span>
+          
+        </div>
+      </div>
+    </div>
+
+  
+
+    <a-scene uploadcare="publicKey: 85ed3c25d99e387316bd" game-state
+             avatar-recorder="spectatorPlay: true; spectatorPosition: 0 10 0; localStorage: false; saveFile: false"
+             auto-enter-vr="enabled: false">
+
+
+
+             
+
+            
+  <a-entity gltf-model="url(walkingmodel.gltf)" animation-mixer></a-entity>
+
+
+      <a-assets timeout="8000">
+
+        <img src="assets/room/set.jpg">
+        <img src="assets/room/tv.png">
+       
+
+        <a-asset-item id="set-obj" src="assets/room/set.gltf"></a-asset-item>
+        <img src="assets/room/set.jpg">
+        <a-asset-item id="floor-obj" src="assets/room/floor.gltf"></a-asset-item>
+        <audio id="avatar1ogg" src="assets/sounds/avatar1.ogg" duration="15"></audio>
+        <audio id="avatar2ogg" src="assets/sounds/avatar2.ogg" duration="19"></audio>
+        <audio id="avatar3ogg" src="assets/sounds/avatar3.ogg" duration="17"></audio>
+        <audio id="avatar4ogg" src="assets/sounds/avatar4.ogg" duration="18"></audio>
+        <audio id="menuogg" src="assets/sounds/menu.ogg" duration="15"></audio>
+        <audio id="avatar1mp3" src="assets/sounds/avatar1.mp3" duration="15"></audio>
+        <audio id="avatar2mp3" src="assets/sounds/avatar2.mp3" duration="19"></audio>
+        <audio id="avatar3mp3" src="assets/sounds/avatar3.mp3" duration="17"></audio>
+        <audio id="avatar4mp3" src="assets/sounds/avatar4.mp3" duration="18"></audio>
+        <audio id="menump3" src="assets/sounds/menu.mp3" duration="15"></audio>
+
+        <img id="floor-img" src="assets/room/flooron.png">
+        <img id="flooroff-mtl" src="assets/room/flooroff.png">
+        <a-asset-item id="spotlight-obj" src="assets/room/spotlight.gltf"></a-asset-item>
+        <img id="spotlight-img" src="assets/room/spotlight.png">
+        <img id="star-img" src="assets/room/star.png">
+        <a-asset-item id="tv-obj" src="assets/room/tv.gltf"></a-asset-item>
+
+
+        <img id="model1" src="assets/model1.png">
+        <img id="model2" src="assets/model2.png">
+        
+      </a-assets>
+      
+
+      <a-entity id="cameraRig" rotation="0 180 0" position="0 2 -1">
+        <a-entity id="avatarHead"
+                  camera="userHeight: 0"
+                  wasd-controls look-controls
+                  visible="false"></a-entity>
+        <!-- Avatar Hands -->
+        <a-entity id="leftHand" visible="false"></a-entity>
+        <a-entity id="rightHand" visible="false"></a-entity>
+      </a-entity>
+      
+      
+      <a-entity id="backText" text="font: assets/asaturdaynight.fnt; align: center; opacity: 1; width: 2.8; color:#fffdb3; value:( Turn around )" visible="false" position="0 1.4 2.19" rotation="0 180 0"></a-entity>
+
+      <!-- Lights -->
+      <a-entity id="light0" light="color:#f8b927;intensity:2;type:point;" position="0 -2 0.5"></a-entity>
+      <a-entity id="light1" light="type:point;color:#ab7121" position="-2.5 2.38 2.7" ></a-entity>
+      <a-entity id="light2" light="color:#205eff;type:point;" position="2.9 2.29 2.7"></a-entity>
+      <a-entity id="light3" light="color:#a431f0;type:point;" position="-2.5 2.38 -2.5"></a-entity>
+      <a-entity id="light4" light="color:#f130cf;intensity:0.66;type:point;" position="3 2.38 -0.61"></a-entity>
+      <!-- spotlights -->
+      
+      <a-entity id="spot3" proxy-event="event: dancing" gltf-model="#spotlight-obj" spotlight="color:#a431f0" position="-3 2.38 -2.5" rotation="-52 60 -13" scale="0 0 0">
+        <a-animation attribute="scale" begin="dancing" to="1 1 1" dur="1000" easing="ease-out-elastic"></a-animation>
+      </a-entity>
+      <a-entity id="spot4" proxy-event="event: dancing" gltf-model="#spotlight-obj" spotlight="color:#f130cf" position="3 2.38 -2.5" rotation="-50 -60 0" scale="0 0 0">
+        <a-animation attribute="scale" begin="dancing" to="1 1 1" dur="1000" easing="ease-out-elastic"></a-animation>
+      </a-entity>
+
+
+    
+      <!-- room, floor and TV sets -->
+      <a-entity id="room" gltf-model="#set-obj" roomcolor="#F29683" >
+        <a-entity sound="loop: true" position="0 2 -1"></a-entity>
+        <a-animation attribute="roomcolor"  to="#FFF" dur="1000" easing="ease-out-elastic"></a-animation>
+      </a-entity>
+      <a-entity id="floor" gltf-model="#floor-obj" material="shader:flat;src:#floor-img" discofloor position="0 -0.009 0" rotation="0 -90 0"></a-entity>
+      <a-image src="#flooroff-mtl" material="repeat: 8 8" rotation="-90 0 0" scale="1.99 1.99 1" position="0 -0.01 0"></a-image>
+      <a-entity id="floor-2" gltf-model="assets/room/floor.gltf" material="shader:flat;src:[object HTMLImageElement]" discofloor="pattern:avatar3" position="-0.006 -0.027 2.038" rotation="0 -90 0"></a-entity>
+      <a-image src="#flooroff-mtl" material="repeat:8 8" rotation="-90 0 0" scale="1.99 1.99 1" position="0 -0.035 2.008"></a-image>
+      <!-- Avatar selection -->
+      <a-entity id="avatarSelection" scale="0.75 0.75 0.75" position="0 1.6 -2" visible="false">
+       
+        <a-entity id="avatar1" class="avatar" rotation="0 180 0">
+          <a-entity class="head" gltf-model="#avatar1-head-obj" position="1 0 0" highlighter="color:#ff8"></a-entity>
+        
+        </a-entity>
+        <a-entity id="avatar3" class="avatar" rotation="0 180 0">
+          <a-entity class="head" gltf-model="#avatar3-head-obj" position="-0.38 0 0" highlighter="color:#ff0"></a-entity>
+          <a-entity class="leftHand" gltf-model="#avatar3-hand-left-obj" visible="false"></a-entity>
+          <a-entity class="rightHand" gltf-model="#avatar3-hand-right-obj" visible="false"></a-entity>
+        </a-entity>
+        </a-entity>
+
+      </a-entity>
+
+      <!--models-->
+      <a-image id="model1" src="#model1" position="0 0.88 2.2"  scale="2 2 0.8 " visible="true"></a-img>
+      <a-image id="model2" src="#model2" position="0 -0.01 -2.548"  scale="1.1 0.9 1 " visible="true"></a-img>
+
+    </a-scene>
+
+    
+    
+    </script>
+  </body>
+</html>
