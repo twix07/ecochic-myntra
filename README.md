@@ -1,4 +1,4 @@
-# ecochic-myntra
+# ecochic-myntra https://twix07.github.io/ecochic-myntra/
 
 # Demo Video
 
