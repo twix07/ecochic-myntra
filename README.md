@@ -1,6 +1,6 @@
 # ecochic-myntra
 
-Demo Video
+# Demo Video
 
 Watch our demo video to get a better idea of our website:
 
