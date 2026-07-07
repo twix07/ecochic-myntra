@@ -1,0 +1,82 @@
+/* General Styling */
+* {
+    /* margin: 0; */
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-top: 100px;
+    padding: 0;
+}
+body {
+    /* margin: 0; */
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    background-color: #00294e;
+    color: white;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f0f2f5;
+}
+
+
+
+h1 {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+div {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+
+span {
+    font-weight: bold;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#logout {
+    background: #007bff;
+    color: #fff;
+}
+
+#logout:hover {
+    background: #0056b3;
+}
+
+#deleteAccount {
+    background: #dc3545;
+    color: #fff;
+}
+
+#deleteAccount:hover {
+    background: #c82333;
+}

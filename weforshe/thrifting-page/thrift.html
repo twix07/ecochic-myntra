@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/EcoChic/weforshe/navbar.css">
+    <link rel="stylesheet" href="thrift.css">
+    <title>Thrift</title>
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('/EcoChic/weforshe/navbar.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    </script>
+    <div class="profile-container">
+    <div class="profile-image">
+        <img src="https://img.freepik.com/premium-photo/cute-girl-photo-ai-generated_980993-1436.jpg" alt="Profile Picture">
+    </div>
+    <div class="profile-info">
+        <div class="profile-header">
+            <span class="profile-username" id="usernamePlaceholder">Loading...</span>
+            <button class="profile-button">Claim Prize</button>
+            <a href="thriftoldsclthes.html" class="overlay-link">
+                <button class="profile-button" id="thrift-button">Thrift Old Clothes</button>
+            </a>
+            <span class="profile-settings">
+                <img src="https://img.icons8.com/material-outlined/24/000000/settings--v1.png" alt="Settings">
+            </span>
+        </div>
+        <div class="profile-stats">
+            <span id="totalCoins" class="stat"><strong>Loading...</strong> Coins Earned</span>
+        </div>
+        <div class="profile-bio">
+            <!-- <span class="profile-name">Sripriya 😊</span> -->
+            <div>I love sustainability❤️</div>
+            <div>Thrifting</div>
+            <div>😊😊</div>
+        </div>
+    </div>
+</div>
+    
+    <section class="shop-by-category">
+        <h2>My Clothes</h2>
+        <div class="categories" id="categories">
+            <div id="userClothes"></div>
+        </div>
+    </section>
+    <script type="module" src="thrift.js"></script>
+</body>
+<script src="https://kit.fontawesome.com/ddc4f27e89.js" crossorigin="anonymous"></script>
+</html>

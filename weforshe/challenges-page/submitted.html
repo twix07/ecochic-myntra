@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/EcoChic/weforshe/navbar.css">
+    <link rel="stylesheet" href="submitted.css">
+
+    <title>Submitted Designs</title>
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('/EcoChic/weforshe/navbar.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    </script>
+
+    <div class="Topic">
+        <h2>Vote <span class="highlight">FOR</span> Designs</h2>
+    </div>
+   
+    <div class="container">
+        <div class="slides">
+            <div class="items" style="background-image: url('summergown.png');">
+                
+                <div class="content">
+                    <div class="name">Sripriya Agarwal</div>
+                    <div class="des">Summer Gown</div>
+                    <button class="b"  onclick="voteDone()">Vote for me</button>
+                </div>
+            </div>
+            <div class="items" style="background-image: url('jump\ suit.png');">
+                <div class="content">
+                    <div class="name">Sriya Singh</div>
+                    <div class="des">Jump Suit </div>
+                    <button class="b"  onclick="voteDone()">Vote for me</button>
+                </div>
+            </div>
+            <div class="items" style="background-image: url('sundress.png');">
+                <div class="content">
+                    <div class="name">Tvisha Chawla</div>
+                    <div class="des">Women's Georgette A-Line Sundresses</div>
+                    <button class="b"  onclick="voteDone()">Vote for me</button>
+                </div>
+            </div>
+            <div class="items" style="background-image: url('kneelength.png');">
+                <div class="content">
+                    <div class="name">Vidushi Agarwal</div>
+                    <div class="des">Women Knee Length Dress</div>
+                    <button class="b"  onclick="voteDone()">Vote for me</button>
+                </div>
+            </div>
+            <div class="items" style="background-image: url('poloshirt.png');">
+                <div class="content">
+                    <div class="name">Rahul Goel</div>
+                    <div class="des">Men's Polo Shirts</div>
+                    <button class="b"  onclick="voteDone()">Vote for me</button>
+                </div>
+            </div>
+            <div class="items" style="background-image: url('halfsleevesshsirt.png');">
+                <div class="content">
+                    <div class="name">Shreyas Jain</div>
+                    <div class="des">Half Sleeves Shirts</div>
+                    <button class="b"  onclick="voteDone()">Vote for me</button>
+                </div>
+            </div>
+       </div>
+    </div>
+   <div class="buttons">
+    <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+    <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+   </div>
+    <script src="https://kit.fontawesome.com/ddc4f27e89.js" crossorigin="anonymous"></script>
+    <script src="submitted.js"></script>
+    <script>
+        function voteDone() {
+            alert("Vote done successfully!");
+        }
+    </script>
+</body>
+<script src="https://kit.fontawesome.com/ddc4f27e89.js" crossorigin="anonymous"></script>
+
+</html>

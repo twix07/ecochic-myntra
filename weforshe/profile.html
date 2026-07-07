@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/EcoChic/weforshe/profile.css">
+    <link rel="stylesheet" href="/EcoChic/weforshe/navbar.css">
+    <script type="module" src="/EcoChic/weforshe/profile.js"></script>
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('/EcoChic/weforshe/navbar.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    </script>
+    <h1>Profile Information</h1>
+    <div class="x">First Name: <span id="profileUserFName"></span></div>
+    <div class="x">Last Name: <span id="profileUserLName"></span></div>
+    <div class="x">Email: <span id="profileUserEmail"></span></div>
+    <div class="x">Total Coins: <span id="profileUserCoins"></span></div>
+    <button id="logout">Logout</button>
+    <button id="deleteAccount">Delete Account</button>
+</body>
+<script src="https://kit.fontawesome.com/ddc4f27e89.js" crossorigin="anonymous"></script>
+
+</html>

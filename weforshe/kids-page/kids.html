@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/EcoChic/weforshe/navbar.css">
+    <link rel="stylesheet" href="kids.css">
+    <title>Kid's Wear</title>
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('/EcoChic/weforshe/navbar.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    </script>
+    <main>
+     <div class="slides">
+        <div class="list">
+          <div class="item active">
+            <img src="https://cdn0.weddingwire.in/article/2934/3_2/1280/jpg/74392-organza-lehenga-sabyasachi-lead.jpeg" alt="img" >
+            <div class="content" >
+                <h1>Scene Stealer</h1>
+                <p>MIN 50% OFF</p>
+                <div class="cta-buttons">
+                    <button class="order-btn">Explore</button>
+
+                </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="https://m.media-amazon.com/images/I/61LpdhrDc8L._AC_UY1100_.jpg" alt="img" >
+            <div class="content" >
+                <h1>Bottom wear and more</h1>
+                <p>MIN 30% OFF</p>
+                <div class="cta-buttons">
+                    <button class="order-btn">Explore</button>
+                    
+                    
+
+                </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="https://c.ndtvimg.com/2021-03/76einb7o_sleepwear650_625x300_10_March_21.jpg" alt="img" >
+            <div class="content" >
+                <h1>Sleep Wear and Inner Wear</h1>
+                <p>MIN 70% OFF</p>
+                <div class="cta-buttons">
+                    <button class="order-btn">Explore</button>
+                    <button class="order-btn">Thrifting</button>
+
+                </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="https://rukminim2.flixcart.com/image/850/1000/l4fxh8w0/necklace-chain/b/r/3/1-stainless-steel-rose-gold-diamond-necklace-for-women-girls-cn-original-imagfcb3t5bhy7zh.jpeg?q=90&crop=false" alt="img" >
+            <div class="content" >
+                <h1>Necklace</h1>
+                <p>Starting Rs.149</p>
+                <div class="cta-buttons">
+                    <button class="order-btn">Explore</button>
+                    <button class="order-btn">Thrifting</button>
+
+                </div>
+            </div>
+          </div>
+         
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+       </div>  
+       <div class="Topic">
+        <h2>Offers <span class="highlight">THAT WILL </span> Blow you away</h2>    </div>  
+    <div class="thumbnail">
+      
+        <div class="item active">
+            <img src="https://cdn0.weddingwire.in/article/2934/3_2/1280/jpg/74392-organza-lehenga-sabyasachi-lead.jpeg" alt="" class="src">
+            <div class="contents">
+                Scene Stealer
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://m.media-amazon.com/images/I/61LpdhrDc8L._AC_UY1100_.jpg" alt="" class="src">
+            <div class="contents">
+                Bottom wear and more
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://c.ndtvimg.com/2021-03/76einb7o_sleepwear650_625x300_10_March_21.jpg" alt="" class="src">
+            <div class="contents">
+                Sleep Wear and Inner Wear
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://rukminim2.flixcart.com/image/850/1000/l4fxh8w0/necklace-chain/b/r/3/1-stainless-steel-rose-gold-diamond-necklace-for-women-girls-cn-original-imagfcb3t5bhy7zh.jpeg?q=90&crop=false" alt="" class="src">
+            <div class="contents">
+                Necklace
+            </div>
+        </div>
+    </div>
+    </main>
+    <section class="shop-by-category">
+        <h2>Shop By Category</h2>
+        <div class="categories">
+            <div class="category">
+                <img src="https://img.faballey.com/images/Product/ILK00197Z/d3.jpg" alt="Ethnic Wear">
+                <h3>Ethnic Wear</h3>
+                <p>50-80% OFF</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://i.pinimg.com/564x/ff/d1/2c/ffd12c9580bbb0bc00a81d8ee0859860.jpg" alt="WFH Casual Wear">
+                <h3>WFH Casual Wear</h3>
+                <p>40-80% OFF</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://media.boohoo.com/i/boohoo/gzz36273_blue_xl?w=900&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit" alt="Men's Activewear">
+                <h3>Women's Activewear</h3>
+                <p>30-70% OFF</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://shop.bench.com.ph/media/catalog/product/cache/63091c77f1e6f53c92e322242fb44c02/y/p/ypd0838db3_md_f_za_1.jpg" alt="Women's Activewear">
+                <h3>Jeans</h3>
+                <p>30-70% OFF</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://m.media-amazon.com/images/I/81eIM2AAjlL._AC_UY1100_.jpg" alt="Western Wear">
+                <h3>Western Wear</h3>
+                <p>40-80% OFF</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://m.media-amazon.com/images/I/31eU5ZjhGBL._AC_UY1100_.jpg" alt="Sportswear">
+                <h3>Sportswear</h3>
+                <p>30-80% OFF</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://rubans.in/cdn/shop/products/necklace-set-necklace-set-33612616794286.jpg?v=1678789714" alt="Sportswear">
+                <h3>Necklaces sets </h3>
+                <p>30-60% OFF</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://m.media-amazon.com/images/I/71F67Lrg+OL._AC_UY1100_.jpg" alt="Sportswear">
+                <h3>InnerWear</h3>
+                <p>30-80% OFF</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://www.jiomart.com/images/product/original/rvkyosiusw/iloz-new-diamond-elegant-stylish-silver-watches-for-women-top-brand-fashion-female-clock-wrist-watches-ladies-for-women-product-images-rvkyosiusw-0-202303011846.jpg?im=Resize=(1000,1000)" alt="Sportswear">
+                <h3>Watches</h3>
+                <p>UPTO 40% OFF</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://static-assets-web.flixcart.com/fk-p-transcode-video/autostitch/shoes/SHOGGGHPHWGAV5YV_1660688261/manifest.jpg?q=20" alt="Sportswear">
+                <h3>Shoes</h3>
+                <p>40-50% OFF</p>
+                <a href="#">Shop Now</a>
+            </div>
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/ddc4f27e89.js" crossorigin="anonymous"></script>
+    <script src="kids.js"></script>
+</body>
+</html>

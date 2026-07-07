@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+    <link rel="stylesheet" href="/EcoChic/weforshe/navbar.css">
+    <link rel="stylesheet" href="chall.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('/EcoChic/weforshe/navbar.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    </script>
+
+    <main>
+        <section class="hero">
+            <h1>Unleash Your Creativity in the Summer Vibes Outfit Challenge!</h1>
+            <p>Show off your style and win amazing prizes!</p>
+            <a href="#image-generator" class="join-now-button">Generate Image with AI</a>
+        </section>
+        <section id="image-generator" class="image-generator">
+            <div class="container">
+                <h2>Image Generator</h2>
+                <label for="designName">Design Name:</label>
+                <input type="text" id="designName" placeholder="Enter name for your design">
+                <textarea id="designDescription" placeholder="Describe your design here..." rows="4"></textarea>
+                <button id="generateBtn">Generate Image</button>
+                <div id="imageResult" class="image-container hidden">
+                    <img id="generatedImage" alt="Generated Image">
+                    <a id="downloadLink" download="generated_image.png" class="hidden">Download Image</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="submission-guidelines">
+            <h3>How to Participate</h3>
+            <ul class="guidelines">
+                <li><i class="fas fa-pencil-alt"></i> Create an outfit using our online design tool or your own software.</li>
+                <li><i class="fas fa-upload"></i> Upload your outfit design in JPG or PNG format.</li>
+                <li><i class="fas fa-file-alt"></i> Fill out the submission form with your details and a brief description of your design.</li>
+            </ul>
+            <h3>Rules</h3>
+            <ul class="rules">
+                <li><i class="fas fa-user"></i> One entry per person.</li>
+                <li><i class="fas fa-check-circle"></i> Original designs only.</li>
+                <li><i class="fas fa-sun"></i> Follow the current theme: Summer Vibes.</li>
+            </ul>
+            <h3>Judging Criteria</h3>
+            <ul class="criteria">
+                <li><i class="fas fa-lightbulb"></i> Creativity</li>
+                <li><i class="fas fa-heart"></i> Adherence to theme</li>
+                <li><i class="fas fa-star"></i> Overall styling and presentation</li>
+            </ul>
+        </section>
+        
+        <section class="submission-form" id="submission-form">
+            <h3>Submit Your Design</h3>
+            <form id="design-submit-form" action="#" method="post" enctype="multipart/form-data">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="design">Upload Design:</label>
+                <input type="file" id="design" name="design" accept="image/*" required>
+                
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+                
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the terms and conditions.</label>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        
+        <!-- Image Generator Section -->
+
+        <section class="gallery-submissions">
+            <a href="submitted.html" class="overlay-link">
+                <div class="content"> 
+                    <img src="https://img.freepik.com/free-photo/digital-art-style-illustration-fashion-designer_23-2151537701.jpg" alt="" srcset="">
+                    <h3>Submitted Designs</h3>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact us: info@yourwebsite.com</p>
+        <p>Follow us on social media:</p>
+        
+        <form>
+            <label for="subscribe">Subscribe for updates:</label>
+            <input type="email" id="subscribe" name="subscribe" placeholder="Your email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/ddc4f27e89.js" crossorigin="anonymous"></script>
+    <script type="module" src="chall.js"></script>
+</body>
+</html>

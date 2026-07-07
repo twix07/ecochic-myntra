@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/EcoChic/weforshe/navbar.css">
+    <link rel="stylesheet" href="mens.css">
+    <title>Men's Wear</title>
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('/EcoChic/weforshe/navbar.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    </script>
+    <main>
+     <div class="slides">
+        <div class="list">
+          <div class="item active">
+            <img src="https://img.freepik.com/premium-photo/welcome-summer-handsome-guy-natural-landscape-summer-vacation-nature-travel-casual-style-trendy-wardrobe-stylish-trends-menswear-store-active-lifestyle-adventure-is-out-there_474717-22263.jpg" alt="img" >
+            <div class="content" >
+                <h1>Elevated Picks</h1>
+                <p>MIN 65% OFF</p>
+                <div class="cta-buttons">
+                    <button class="order-btn">Explore</button>
+                    <!-- <button class="order-btn">Thrifting</button> -->
+
+                </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="https://esq.h-cdn.co/assets/16/29/1600x800/landscape-1468967350-suitsupply-outlet-shop.jpg" alt="img" >
+            <div class="content" >
+                <h1>Coats and Shirts</h1>
+                <p>MIN 30% OFF</p>
+                <div class="cta-buttons">
+                    <button class="order-btn">Explore</button>
+                    
+                </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="https://img.mensxp.com/media/content/2023/Oct/kurta-ayushmann_651e5aba96447.jpeg" alt="img" >
+            <div class="content" >
+                <h1>Classic Kurtas</h1>
+                <p>MIN 70% OFF</p>
+                <div class="cta-buttons">
+                    <button class="order-btn">Explore</button>
+                    <button class="order-btn">Thrifting</button>
+                </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="https://img.damensch.com//damensch/cms-media/blog-images/mens%20innerwear%205.png" alt="img" >
+            <div class="content" >
+                <h1>Men's Innerwear</h1>
+                <p>Starting Rs.149</p>
+                <div class="cta-buttons">
+                    <button class="order-btn">Explore</button>
+                    <button class="order-btn">Thrifting</button>
+                </div>
+            </div>
+          </div>
+         
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>  
+       <div class="Topic">
+        <h2>Offers <span class="highlight">THAT WILL </span> Blow you away</h2>
+    </div>  
+    <div class="thumbnail">
+      
+        <div class="item active">
+            <img src="https://img.freepik.com/premium-photo/welcome-summer-handsome-guy-natural-landscape-summer-vacation-nature-travel-casual-style-trendy-wardrobe-stylish-trends-menswear-store-active-lifestyle-adventure-is-out-there_474717-22263.jpg" alt="" class="src">
+            <div class="contents">
+                Elevating Picks
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://esq.h-cdn.co/assets/16/29/1600x800/landscape-1468967350-suitsupply-outlet-shop.jpg" alt="" class="src">
+            <div class="contents">
+                Coats and Shirts
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://img.mensxp.com/media/content/2023/Oct/kurta-ayushmann_651e5aba96447.jpeg" alt="" class="src">
+            <div class="contents">
+                Classic Kurtas
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://img.damensch.com//damensch/cms-media/blog-images/mens%20innerwear%205.png" alt="" class="src">
+            <div class="contents">
+                Men's Innerwear
+            </div>
+        </div>
+    </div>
+    </main>
+    <section class="shop-by-category">
+        <h2>Shop By Category</h2>
+        <div class="categories">
+            <div class="category">
+                <img src="https://file.theethnicworld.com/image/1200/Navy%20Blue%20Colour%20Outluk%2083%20New%20Designer%20Ethnic%20Wear%20Mens%20Kurta%20Pajama%20With%20Jacket%20Collection%2083002.jpg" alt="Ethnic Wear">
+                <h3>Ethnic Wear</h3>
+                <p>50-80% OFF</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://i.pinimg.com/736x/4b/ea/c1/4beac1a2ceb6ff197cd14c57547d5356.jpg" alt="WFH Casual Wear">
+                <h3>WFH Casual Wear</h3>
+                <p>40-80% OFF</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://www.hidelt.com/cdn/shop/files/Untitleddesign-2023-08-09T155618.735_1445x.png?v=1691578430" alt="Men's Activewear">
+                <h3>Men's Activewear</h3>
+                <p>30-70% OFF</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://5.imimg.com/data5/QN/SH/MY-5299033/men-s-party-wear-jeans.jpg" alt="Women's Activewear">
+                <h3>Jeans</h3>
+                <p>30-70% OFF</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSozPm3dblU1YZeTVSdHS3GM-1_WKaHopoBAw&s" alt="Western Wear">
+                <h3>Western Wear</h3>
+                <p>40-80% OFF</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://i.pinimg.com/736x/19/4f/5b/194f5b7924cee61a06b4745b4f63d448.jpg" alt="Sportswear">
+                <h3>Sportswear</h3>
+                <p>30-80% OFF</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2023/8/336203649/EA/KY/HW/47492272/men-blue-cotton-kurta-pajama.jpeg" alt="Sportswear">
+                <h3>Kurtas sets </h3>
+                <p>30-60% OFF</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://assets.trendin.com/img/app/categorymedia/production/1/1577-134-12584.png" alt="Sportswear">
+                <h3>InnerWear</h3>
+                <p>30-80% OFF</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20230921/meKx/650c4c2bddf7791519efcd10/skylona_black_chronograph_watch.jpg" alt="Sportswear">
+                <h3>Watches</h3>
+                <p>UPTO 40% OFF</p>
+                <a href="#">Shop Now</a>
+            </div>
+            <div class="category">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2023/7/330730480/EH/HZ/AZ/187501904/img-20230731-wa0033-500x500.jpg" alt="Sportswear">
+                <h3>Shoes</h3>
+                <p>40-50% OFF</p>
+                <a href="#">Shop Now</a>
+            </div>
+        </div>
+    </section>
+    <script src="https://kit.fontawesome.com/ddc4f27e89.js" crossorigin="anonymous"></script>
+    <script src="mens.js"></script>
+</body>
+</html>

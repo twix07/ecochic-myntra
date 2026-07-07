@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    /* padding: 0; */
+    background-color: #f4f4f9;
+}
+
+* {
+    /* margin: 0;
+    padding: 0; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* margin: 0;
+    padding: 0; */
+}
+
+header, footer {
+    background-color: #00294e;
+    color: white;
+}
+
+main {
+    padding-top: 70px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-background {
+    position: absolute;
+    width: 320px;
+    height: 380px;
+    background-color: #00294e;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+.hero-image {
+    max-width: 300px;
+    height: auto;
+    z-index: 2;
+    position: relative;
+    margin-right: 100px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: #ff6600;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #333;
+}
+
+.shop-now {
+    padding: 10px 20px;
+    background-color: #00294e;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top:60px;
+    margin-left: 10px;
+}
+
+.shop-now:hover {
+    background-color: #ff6600;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}

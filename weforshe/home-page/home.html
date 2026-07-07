@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoChic</title>
+    <link rel="stylesheet" href="/EcoChic/weforshe/navbar.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('/EcoChic/weforshe/navbar.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    </script>
+    <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "ZXBlEGHfUouNr0t2bhqtT",
+        domain: "www.chatbase.co"
+        }
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="ZXBlEGHfUouNr0t2bhqtT"
+        domain="www.chatbase.co"
+        defer>
+        </script>
+    <main>
+        <section class="hero">
+            <div class="hero-image-wrapper">
+                <div class="hero-background"></div>
+                <img src="girl.png" alt="Girl with hat" class="hero-image">
+            </div>
+            <div class="hero-text">
+                <h1>All About EcoChic</h1>
+                <p>Unleash your creativity and dive into the world of fashion like never before! Whether you're a designer, a trendsetter, or a sustainability enthusiast, we’ve got something special for you.</p>
+                <button class="shop-now">Shop now</button>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="https://kit.fontawesome.com/ddc4f27e89.js" crossorigin="anonymous"></script>
+
+</html>

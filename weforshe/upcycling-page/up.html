@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcycling</title>
+    <link rel="stylesheet" href="/EcoChic/weforshe/navbar.css">
+    <link rel="stylesheet" href="up.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('/EcoChic/weforshe/navbar.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    </script>
+    <div class="container">
+        <div class="video-player">
+            <iframe id="main-video" width="1250" height="450" src="https://www.youtube.com/embed/YLEcNmAJpgg" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+        </div>
+
+       
+        <div class="slides">
+            <div class="list">
+                <div class="item">
+                    <div class="content">
+                        <div class="notes-section">
+                            <div class="tabs">
+                                <button class="tab-button active" data-tab="notes">Notes</button>
+                                <button class="tab-button" data-tab="feedback">Feedback</button>
+                            </div>
+                            <div class="tab-content" id="notes">
+                                <div class="summary">
+                                    <h2>Summary</h2>
+                                    <p>Hi! Thank you for watching this video :) I'm excited to show you how to easily sew this Cindy dress that embraces clean design lines and silhouettes, allowing the movement of this dress to have your attention for a fairytale-like simple elegance :) 
+
+                                        → Hidden side pockets make a welcome addition to the classic A-line maxi skirt, which has an absolutely lovely drape, and the charming balloon sleeves compliment the rounded, modest neckline. Tied all together with extra long, optional ties at the sides, this Cindy dress is the personification of a humble & kind heroine in a beloved fairy-tale. </p>
+                                </div>
+                                <div class="key-points">
+                                    <h2>Key Point</h2>
+                                    <ul>
+                                        <li>Choose a woven dress-weight fabric that will hold its shape, won’t stretch and isn’t see through. This would be something like a gauze, lawn, rayon challis, chiffon, silk, cotton, linen or even velvet. </li>
+                                        <li>Alice, a product manager, uses Grain for customer meetings to create and tag highlights and provide valuable insights to share in Slack and Product Board.</li>
+                                        <li>Bob Marley encourages viewers to explore the AI notes below the video and try adding their own custom sections. They can reach out to the Grain team at help@grain.co for assistance.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                           
+                            <div class="tab-content" id="feedback" style="display:none;">
+                                <p>Feedback content goes here...</p>
+                            </div>
+                        </div>
+                        <div class="timeline-section">
+                            <h2>Comments</h2>
+                            <div class="timeline" id="comment-list">
+                                <div class="timeline-item"><i class="fa-solid fa-user"></i><span>Amazing Video</span></div>
+                                <div class="timeline-item"><i class="fa-solid fa-user"></i><span>We have a wonderful experience</span></div>
+                                <div class="timeline-item"><i class="fa-solid fa-user"></i><span>Loved the content</span></div>
+                                <div class="timeline-item"><i class="fa-solid fa-user"></i><span>Will be surely using this</span></div>
+                                <div class="timeline-item"><i class="fa-solid fa-user"></i><span> Woww!!</span></div>
+                                <div class="timeline-item"><i class="fa-solid fa-user"></i><span>Yeahhh!!!</span></div>
+                            </div>
+                            <div class="comment-form">
+                                <input type="text" id="comment-input" placeholder="Enter your comment...">
+                                <button onclick="addComment()">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Topic">
+            <h2>Explore <span class="highlight">UPCYCLING </span> Methods</h2>    </div>  
+        <div class="video-list">
+            <div class="videos">
+                <div class="video-item">
+                    <!-- Video content (thumbnail, title, etc.) -->
+                    <h3>Upcycling Old Clothes</h3>
+                    <img src="https://img.youtube.com/vi/yLZgrSpCAVs/0.jpg" width="200" height="200" onclick="playVideo('yLZgrSpCAVs?si=KijxllMouC7-xp2q')" alt="Video 4">
+                  
+                </div>
+                <div class="video-item">
+                    <!-- Video content (thumbnail, title, etc.) -->
+                    <h3>Sewing Tutorial</h3>
+                    <img src="https://img.youtube.com/vi/YLEcNmAJpgg/0.jpg" width="200" height="200" onclick="playVideo('YLEcNmAJpgg?si=HZkZ3wtbUTwBn6wz')" alt="Video 4">
+                    
+                </div>
+                <div class="video-item">
+                    <!-- Video content (thumbnail, title, etc.) -->
+                    <h3>DIY Puff Sleep Dress</h3>
+                    <img src="https://img.youtube.com/vi/nTxmfBbht2w/0.jpg" width="200" height="200" onclick="playVideo('nTxmfBbht2w?si=z1WWfCaoNh8SIvMe')" alt="Video 4">
+                  
+                </div>
+                <div class="video-item">
+                    <!-- Video content (thumbnail, title, etc.) -->
+                    <h3>DIY Old Tshirts</h3>
+                    <img src="https://img.youtube.com/vi/x3GINpzPkXo/0.jpg" width="200" height="200" onclick="playVideo('x3GINpzPkXo?si=lQzFBfE7FXHvF_ui')" alt="Video 4">
+                  
+                </div>
+                <div class="video-item">
+                    <!-- Video content (thumbnail, title, etc.) -->
+                    <h3>Reuse Old Clothes</h3>
+                    <img src="https://img.youtube.com/vi/ZYj0pGhGMnk/0.jpg" width="200" height="200" onclick="playVideo('ZYj0pGhGMnk?si=2I7tS66fKZ_UPYZL')" alt="Video 4">
+                    
+                </div>
+                <div class="video-item">
+                    <!-- Video content (thumbnail, title, etc.) -->
+                    <h3>Thrift Flip</h3>
+                    <img src="https://img.youtube.com/vi/FdtNVmZXLEM/0.jpg" width="200" height="200" onclick="playVideo('FdtNVmZXLEM?si=ggd4YFfkVDNcCK-r')" alt="Video 4">
+                    
+                </div>
+                <div class="video-item">
+                    <!-- Video content (thumbnail, title, etc.) -->
+                    <h3>Upcycling Old Clothes</h3>
+                    <img src="https://img.youtube.com/vi/BJ-vy4uth6k/0.jpg" width="200" height="200" onclick="playVideo('BJ-vy4uth6k')" alt="Video 4">
+                  
+                </div>
+                <div class="video-item">
+                    <!-- Video content (thumbnail, title, etc.) -->
+                    <h3>7 new ideas for reuse</h3>
+                    <img src="https://img.youtube.com/vi/Bsj76_Jp3bU/0.jpg" width="200" height="200" onclick="playVideo('Bsj76_Jp3bU')" alt="Video 4">
+                    
+                </div>
+                <div class="video-item">
+                    <!-- Video content (thumbnail, title, etc.) -->
+                    <h3>JeansRecycling</h3>
+                    <img src="https://img.youtube.com/vi/uSMrqygBkjg/0.jpg" width="200" height="200" onclick="playVideo('uSMrqygBkjg')" alt="Video 4">
+                  
+                </div>
+
+                <div class="video-item">
+                    <!-- Video content (thumbnail, title, etc.) -->
+                    <h3>DIY Bags from jeans</h3>
+                    <img src="https://img.youtube.com/vi/xHCNIncuq5o/0.jpg" width="200" height="200" onclick="playVideo('xHCNIncuq5o')" alt="Video 4">
+                   
+                </div>
+                <div class="video-item">
+                    <!-- Video content (thumbnail, title, etc.) -->
+                    <h3>Old Clothes Reuse Hacks</h3>
+                    <img src="https://img.youtube.com/vi/S67EG8ntlcM/0.jpg" width="200" height="200" onclick="playVideo('S67EG8ntlcM')" alt="Video 4">
+                   
+                </div>
+            </div>
+            <button class="prev-btn">&lt;</button>
+            <button class="next-btn">&gt;</button>
+        </div>
+        
+    
+      
+    </div>
+    
+    <script>
+        function playVideo(videoId) {
+            const mainVideo = document.getElementById('main-video');
+            mainVideo.src = `https://www.youtube.com/embed/${videoId}`;
+            
+            const titles = {
+                'dQw4w9WgXcQ': 'Bob Marley',
+                '3JZ_D3ELwOQ': 'Alice Anderson',
+                'L_jWHffIx5E': 'John Doe',
+                'oHg5SJYRHA0': 'Rick Astley'
+            };
+            
+            const descriptions = {
+                'dQw4w9WgXcQ': 'Default video description.',
+                '3JZ_D3ELwOQ': 'Alice Anderson description.',
+                'L_jWHffIx5E': 'John Doe description.',
+                'oHg5SJYRHA0': 'Rick Astley description.'
+            };
+    
+            document.getElementById('video-title').innerText = `Video Title: ${titles[videoId]}`;
+            document.getElementById('video-description').innerText = `Description: ${descriptions[videoId]}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all tab buttons
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to the clicked button
+                    this.classList.add('active');
+
+                    // Hide all tab contents
+                    tabContents.forEach(content => content.style.display = 'none');
+
+                    // Show the associated tab content
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).style.display = 'block';
+                });
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="up.js"></script>
+    <script src="https://kit.fontawesome.com/ddc4f27e89.js" crossorigin="anonymous"></script>
+</body>
+</html>

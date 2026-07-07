@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #00294e;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the navbar stays on top of other elements */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 10px; /* Reduced margin to fit more icons */
+    cursor: pointer;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    color: #ff6600;
+    /* background-color: white; */
+}
+
+.search-bar {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    margin-left: 10px; /* Added margin to separate from search button */
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Adjusted margin for better alignment */
+}
+
+.search-button {
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.search-button svg {
+    fill: #aaa;
+    transition: fill 0.3s ease;
+}
+
+.search-button:hover svg {
+    fill: #fff;
+}
+
+/* .logo {
+    font-size: 24px;
+    font-weight: bold;
+} */
+
+/* Adjusted margin for the icons container */
+.icons {
+    margin-left: auto; /* Pushes icons to the right edge of the navbar */
+    margin-right: 20px; /* Adjusted margin for better alignment */
+}
+
+.icons i {
+    font-size: 20px; /* Adjusted font size for icons */
+    margin-left: 10px; /* Added margin between icons */
+}
+
+.icons i:hover {
+    color: #ff6600;
+}
